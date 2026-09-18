@@ -1,77 +1,38 @@
-﻿#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <filesystem>
 #include <string>
-
 #include "pdfsolid_conversion.h"
 
-using namespace pdfsolid;
-using namespace pdfsolid::base;
-using namespace pdfsolid::common;
-using namespace pdfsolid::conversion;
-
-std::string input_file = "../../input_files/";
-std::string output_file = "../../output_files/";
-std::string password = "";
-std::string resource_path = "";
-
-const char* license = "";
-
-auto progress_lambda = [](int current_page_count, int total_page_count) {
-    std::cout << "lambda convert rate: " << current_page_count << "/" << total_page_count << std::endl;
-};
-
-int main()
-{
-    std::cout << "pdfsolid conversion sdk license verify: " << (int)LibraryManager::LicenseVerify(license, "", "com.pdfsolid.conversion") << std::endl;
-    LibraryManager::Initialize(resource_path.c_str());
-    LibraryManager::SetLogger(false, false);
-
-
-    CConvertCallback callback = {nullptr, nullptr, progress_lambda};
-    LibraryManager::SetDocumentAIModel("path/model");
-    ConvertOptions opt;
-
-    // pdf to word
-    CPDFConversion::StartPDFToWord((input_file + "word.pdf").c_str(), password.c_str(), std::string(output_file).append("word.docx").c_str(), opt, &callback);
-
-    // pdf to excel
-    CPDFConversion::StartPDFToExcel((input_file + "excel.pdf").c_str(), password.c_str(), std::string(output_file).append("excel.xlsx").c_str(), opt, &callback);
-
-    // pdf to ppt
-    CPDFConversion::StartPDFToPpt((input_file + "powerpoint.pdf").c_str(), password.c_str(), std::string(output_file).append("powerpoint.pptx").c_str(), opt, &callback);
-
-    // pdf to csv
-    opt.excel_csv_format = true;
-    CPDFConversion::StartPDFToExcel((input_file + "excel.pdf").c_str(), password.c_str(), std::string(output_file).append("csv.csv").c_str(), opt, &callback);
-
-    // pdf to html
-    CPDFConversion::StartPDFToHtml((input_file + "word.pdf").c_str(), password.c_str(), std::string(output_file).append("html.html").c_str(), opt, &callback);
-
-    // pdf to rtf
-    CPDFConversion::StartPDFToRtf((input_file + "word.pdf").c_str(), password.c_str(), std::string(output_file).append("rtf.rtf").c_str(), opt, &callback);
-
-    // pdf to image
-    CPDFConversion::StartPDFToImage((input_file + "word.pdf").c_str(), password.c_str(), std::string(output_file).c_str(), opt, &callback);
-
-    // pdf to txt
-    CPDFConversion::StartPDFToTxt((input_file + "word.pdf").c_str(), password.c_str(), std::string(output_file).append("txt.txt").c_str(), opt, &callback);
-
-    // pdf to json
-    CPDFConversion::StartPDFToJson((input_file + "word.pdf").c_str(), password.c_str(), std::string(output_file).append("json.json").c_str(), opt, &callback);
-
-    // pdf to searchable pdf
-    opt.enable_ocr = true;
-    opt.transparent_text = true;
-	opt.languages[0] = OCRLanguage::e_English;
-    opt.language_count = 1;
-    CPDFConversion::StartPDFToSearchablePdf((input_file + "word.pdf").c_str(), password.c_str(), std::string(output_file).append("pdf.pdf").c_str(), opt, &callback);
-
-    // pdf to ofd
-    CPDFConversion::StartPDFToOfd((input_file + "word.pdf").c_str(), password.c_str(), std::string(output_file).append("pdf.pdf").c_str(), opt, &callback);
-
-
-    char version[30];
+int main(int argc, char **argv) {
+    using pdfsolid::common::LibraryManager;
+    using pdfsolid::conversion::CPDFConversion;
+    char version[64] = {};
     LibraryManager::GetVersion(version);
-    std::cout << "pdfsolid conversion sdk version: " << version << std::endl;
+    std::printf("sdk_version=%s\n", version);
+    if (std::strcmp(version, "1.2.0") != 0) return 1;
+    if (argc == 2 && std::strcmp(argv[1], "--version") == 0) return 0;
+    if (argc != 5) {
+        std::fprintf(stderr, "Usage: demo <license.xml> <resource-dir> <input.pdf> <new-output.docx>\n");
+        return 2;
+    }
+    const std::string model = std::string(argv[2]) + "/models/documentai.model";
+    if (!std::filesystem::exists(argv[1]) || !std::filesystem::exists(model) ||
+        !std::filesystem::exists(argv[3]) || std::filesystem::exists(argv[4])) return 2;
+    int code = static_cast<int>(LibraryManager::LicenseVerify(argv[1], "", ""));
+    std::printf("license_return_code=%d\n", code);
+    if (code != 0) { LibraryManager::Release(); return 3; }
+    LibraryManager::Initialize(argv[2]);
+    code = static_cast<int>(LibraryManager::SetDocumentAIModel(model.c_str(), -1));
+    std::printf("model_return_code=%d\n", code);
+    if (code != 0) { LibraryManager::Release(); return 4; }
+    pdfsolid::base::ConvertOptions options;
+    code = static_cast<int>(CPDFConversion::StartPDFToWord(argv[3], "", argv[4], options, nullptr));
+    std::printf("conversion_return_code=%d\n", code);
     LibraryManager::Release();
-    return 0;
+    if (code != 0) return 5;
+    if (!std::filesystem::exists(argv[4])) return 6;
+    const auto size = std::filesystem::file_size(argv[4]);
+    std::printf("output_bytes=%llu\n", static_cast<unsigned long long>(size));
+    return size > 0 ? 0 : 6;
 }
