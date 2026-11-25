@@ -21,5 +21,9 @@ var classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion =
     [ "StartPDFToTxt", "classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion.html#a54f4118a3a17c2ed7100275924f402d4", null ],
     [ "StartPDFToTxt", "classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion.html#a2f9f03e3e99598de36f75de96251b9f8", null ],
     [ "StartPDFToWord", "classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion.html#adef2bdc70f4718eb290bf875c504ba20", null ],
-    [ "StartPDFToWord", "classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion.html#a0f57514deda36c3ecbbc9b2e01f5a9e0", null ]
+    [ "StartPDFToWord", "classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion.html#a0f57514deda36c3ecbbc9b2e01f5a9e0", null ],
+    [ "StartWordToPdf", "classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion.html#a392b2c202b1a290f1ae8c8d58abb7c2e", null ],
+    [ "StartWordToPdf", "classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion.html#a20daa309f766ccd451c78050ba0172e2", null ],
+    [ "StartWordToPdf", "classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion.html#a14ce5fc2a9f120ec04428ad193c92e35", null ],
+    [ "StartWordToPdf", "classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion.html#a1d3c6dbe2c7607e03b826d17fd1683a7", null ]
 ];

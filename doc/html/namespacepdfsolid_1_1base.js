@@ -73,6 +73,11 @@ var namespacepdfsolid_1_1base =
       [ "e_GIF", "namespacepdfsolid_1_1base.html#a52a4f5cd72d70e184534fcf24c908630ad6a42757137012b2dbda6de7ce1b06d0", null ],
       [ "e_WEBP", "namespacepdfsolid_1_1base.html#a52a4f5cd72d70e184534fcf24c908630a5c149a14506d24eb6b715f555b51c4ee", null ]
     ] ],
+    [ "LicenseType", "namespacepdfsolid_1_1base.html#a2b17a49c07e2b000a9ecfd7cdb52cde7", [
+      [ "e_Unknown", "namespacepdfsolid_1_1base.html#a2b17a49c07e2b000a9ecfd7cdb52cde7acf06857e643a4df05e460a4edc2cbdfd", null ],
+      [ "e_Trial", "namespacepdfsolid_1_1base.html#a2b17a49c07e2b000a9ecfd7cdb52cde7aa34c628d1bbc72d8bac31aed34a68f81", null ],
+      [ "e_Formal", "namespacepdfsolid_1_1base.html#a2b17a49c07e2b000a9ecfd7cdb52cde7a8ccd887f80760875a44e4b4ecf8da42c", null ]
+    ] ],
     [ "OCRLanguage", "namespacepdfsolid_1_1base.html#a480aae4d250d7d0b059efe4403fa9502", [
       [ "e_UNKNOWN", "namespacepdfsolid_1_1base.html#a480aae4d250d7d0b059efe4403fa9502a7413940ca1f638638fcc13ae79920496", null ],
       [ "e_Chinese", "namespacepdfsolid_1_1base.html#a480aae4d250d7d0b059efe4403fa9502aef6cb9d2358bdddcc9c083327592711c", null ],
@@ -101,5 +106,14 @@ var namespacepdfsolid_1_1base =
     [ "PageLayoutMode", "namespacepdfsolid_1_1base.html#af40fbe6000f170d2f7556eda0d0867f8", [
       [ "e_Box", "namespacepdfsolid_1_1base.html#af40fbe6000f170d2f7556eda0d0867f8af34593166f5931856f8d9d82e41c5f87", null ],
       [ "e_Flow", "namespacepdfsolid_1_1base.html#af40fbe6000f170d2f7556eda0d0867f8ad7d09f974f44d5c75df4806c0d3b11ae", null ]
+    ] ],
+    [ "TableRecognitionAccuracy", "namespacepdfsolid_1_1base.html#aa2b7245636e1fe857c85e7605bc77c29", [
+      [ "e_HighAccuracy", "namespacepdfsolid_1_1base.html#aa2b7245636e1fe857c85e7605bc77c29a94f127cd06217b1042b77389cced362c", null ],
+      [ "e_Balanced", "namespacepdfsolid_1_1base.html#aa2b7245636e1fe857c85e7605bc77c29a41e3cc74b010fad99da92c100db7e730", null ]
+    ] ],
+    [ "WordPdfBookmarkMode", "namespacepdfsolid_1_1base.html#acbc87924168723e1c093c7d032552dc1", [
+      [ "e_None", "namespacepdfsolid_1_1base.html#acbc87924168723e1c093c7d032552dc1aab59949b935bd11e2ebc1d091a375e9e", null ],
+      [ "e_Headings", "namespacepdfsolid_1_1base.html#acbc87924168723e1c093c7d032552dc1abaf3f1773a68b9d8c6ad784c546a006d", null ],
+      [ "e_WordBookmarks", "namespacepdfsolid_1_1base.html#acbc87924168723e1c093c7d032552dc1a7416476091bf162e03b2661b9ff24df3", null ]
     ] ]
 ];

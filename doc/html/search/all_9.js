@@ -5,5 +5,6 @@ var searchData=
   ['layout_2',['layout',['../struct_c_convert_callback.html#ad65239e0b3d136aaa400a5c27cad51ef',1,'CConvertCallback']]],
   ['library_5fmanager_2eh_3',['library_manager.h',['../library__manager_8h.html',1,'']]],
   ['librarymanager_4',['LibraryManager',['../classpdfsolid_1_1common_1_1_library_manager.html',1,'pdfsolid::common']]],
-  ['licenseverify_5',['LicenseVerify',['../classpdfsolid_1_1common_1_1_library_manager.html#a70bb50f71378773a414aeebebf0451d6',1,'pdfsolid::common::LibraryManager']]]
+  ['licensetype_5',['LicenseType',['../namespacepdfsolid_1_1base.html#a2b17a49c07e2b000a9ecfd7cdb52cde7',1,'pdfsolid::base']]],
+  ['licenseverify_6',['LicenseVerify',['../classpdfsolid_1_1common_1_1_library_manager.html#a70bb50f71378773a414aeebebf0451d6',1,'pdfsolid::common::LibraryManager']]]
 ];

@@ -4,8 +4,11 @@ var structpdfsolid_1_1base_1_1_convert_options =
     [ "contain_annotation", "structpdfsolid_1_1base_1_1_convert_options.html#a67f32382806c5ebcfeda9af4e1593eed", null ],
     [ "contain_image", "structpdfsolid_1_1base_1_1_convert_options.html#a0eccc86662dab4cd15f097aa8029aeeb", null ],
     [ "contain_page_background_image", "structpdfsolid_1_1base_1_1_convert_options.html#a482729ad7a0f834e739a1ca2d8ea1a07", null ],
+    [ "custom_page_height", "structpdfsolid_1_1base_1_1_convert_options.html#aedf9fd5d7cbf5bcf7b1195375e0f0dd8", null ],
+    [ "custom_page_width", "structpdfsolid_1_1base_1_1_convert_options.html#a6db04d19b9f8d80243560d8d08557424", null ],
     [ "enable_ai_layout", "structpdfsolid_1_1base_1_1_convert_options.html#af75fe917cf123701f736f9c58a8fd548", null ],
     [ "enable_ai_table_recognition", "structpdfsolid_1_1base_1_1_convert_options.html#a10573bdb23e72b714741b9cf37f7e5bc", null ],
+    [ "enable_auto_page_size", "structpdfsolid_1_1base_1_1_convert_options.html#a820b706824cbe7404c95d45de69310b6", null ],
     [ "enable_document_dewarp", "structpdfsolid_1_1base_1_1_convert_options.html#aa1a396476544d606fe249cdda57a9d64", null ],
     [ "enable_document_orientation_classification", "structpdfsolid_1_1base_1_1_convert_options.html#a529bd87f24c71cb4274755249a73a119", null ],
     [ "enable_ocr", "structpdfsolid_1_1base_1_1_convert_options.html#afc74c44929d74285cda154dca0bcbb80", null ],
@@ -26,6 +29,8 @@ var structpdfsolid_1_1base_1_1_convert_options =
     [ "output_document_per_page", "structpdfsolid_1_1base_1_1_convert_options.html#a61a57290515969b868ccd2e0dd63acca", null ],
     [ "page_layout_mode", "structpdfsolid_1_1base_1_1_convert_options.html#a5539e3d1d1989225f06a6464f14bc24f", null ],
     [ "page_ranges", "structpdfsolid_1_1base_1_1_convert_options.html#a9dcbfc521dcbee3e7561fec7f5572cff", null ],
+    [ "table_recognition_accuracy", "structpdfsolid_1_1base_1_1_convert_options.html#ac0ba8ba6a95da0e735166c1784483b0a", null ],
     [ "transparent_text", "structpdfsolid_1_1base_1_1_convert_options.html#adbe1eab6204bfe35e46e16f4ae412512", null ],
-    [ "txt_table_format", "structpdfsolid_1_1base_1_1_convert_options.html#a045e8609e43d34ac39329903eac47172", null ]
+    [ "txt_table_format", "structpdfsolid_1_1base_1_1_convert_options.html#a045e8609e43d34ac39329903eac47172", null ],
+    [ "word_pdf_bookmark_mode", "structpdfsolid_1_1base_1_1_convert_options.html#a1bf1917632856858abe9c396757db97c", null ]
 ];

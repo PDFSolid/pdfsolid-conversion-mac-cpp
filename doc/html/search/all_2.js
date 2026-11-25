@@ -16,5 +16,7 @@ var searchData=
   ['convertoptions_13',['ConvertOptions',['../structpdfsolid_1_1base_1_1_convert_options.html',1,'pdfsolid::base']]],
   ['cpdfconversion_14',['CPDFConversion',['../classpdfsolid_1_1conversion_1_1_c_p_d_f_conversion.html',1,'pdfsolid::conversion']]],
   ['cprogress_15',['CProgress',['../pdfsolid__config__macros_8h.html#a2d56dc84f2bb501afbc6a9e47701d2eb',1,'pdfsolid_config_macros.h']]],
-  ['ctablecallback_16',['CTableCallback',['../pdfsolid__config__macros_8h.html#afc08f8e24b34cbeedbe9a22835b21118',1,'pdfsolid_config_macros.h']]]
+  ['ctablecallback_16',['CTableCallback',['../pdfsolid__config__macros_8h.html#afc08f8e24b34cbeedbe9a22835b21118',1,'pdfsolid_config_macros.h']]],
+  ['custom_5fpage_5fheight_17',['custom_page_height',['../structpdfsolid_1_1base_1_1_convert_options.html#aedf9fd5d7cbf5bcf7b1195375e0f0dd8',1,'pdfsolid::base::ConvertOptions']]],
+  ['custom_5fpage_5fwidth_18',['custom_page_width',['../structpdfsolid_1_1base_1_1_convert_options.html#a6db04d19b9f8d80243560d8d08557424',1,'pdfsolid::base::ConvertOptions']]]
 ];
